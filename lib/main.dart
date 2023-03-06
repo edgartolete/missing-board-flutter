@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:app_project/question.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     title: 'Navigation Basics',
     home: HomeApp(),
   ));
 }
 
 class HomeApp extends StatefulWidget {
-  const HomeApp({Key? key}) : super(key: key);
+  HomeApp({Key? key}) : super(key: key);
 
   @override
   State<HomeApp> createState() => _HomeAppState();
@@ -21,8 +20,8 @@ class _HomeAppState extends State<HomeApp> {
   void answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
-      print('test');
     });
+    print('hello');
   }
 
   @override
@@ -42,9 +41,7 @@ class _HomeAppState extends State<HomeApp> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Question(
-              questions[_questionIndex],
-            ),
+            Text(questions[_questionIndex]),
             ElevatedButton(
               onPressed: answerQuestion,
               child: const Text("Answer 1"),
