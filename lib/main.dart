@@ -21,6 +21,7 @@ class _HomeAppState extends State<HomeApp> {
   void answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
+      print('test');
     });
   }
 
